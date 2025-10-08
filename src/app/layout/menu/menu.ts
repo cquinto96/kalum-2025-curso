@@ -16,10 +16,12 @@ import { RouterModule } from '@angular/router';
   ],
   templateUrl: './menu.html'
 })
+
 export class Menu {
+
   @Output () toggleSidenav = new EventEmitter<void>();
-  
-  onToggleSidenav (){
+
+  onToggleSidenav(){
     this.toggleSidenav.emit();
   }
 

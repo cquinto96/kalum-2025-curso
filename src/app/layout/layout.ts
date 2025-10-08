@@ -6,14 +6,17 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     Menu,
     MatSidenavModule,
+    MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     RouterModule,
@@ -22,12 +25,16 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './layout.html',
   styles: ``
 })
+
 export class Layout {
 
   isSidenavOpen= signal(false);
-
-  togglesSidenav(){
+ 
+  toggleSidenav(){
+    console.log('pruebaa');
     this.isSidenavOpen.update(v => !v);
   }
 
 }
+
+
