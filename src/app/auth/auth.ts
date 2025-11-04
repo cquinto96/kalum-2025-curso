@@ -10,7 +10,6 @@ export class AuthService {
   private _token?: string;
   private _user?: User;
 
-
   public get user(): User {
     if(this._user != null) {
       return this._user;
@@ -54,7 +53,6 @@ export class AuthService {
     }
     return null;
   }
-
   
  saveUser(payload: any):void {
     this._user = new User();
